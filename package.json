@@ -1,0 +1,48 @@
+{
+  "name": "@steveush/grunt-jszip",
+  "description": "Zip and unzip files and folders using Grunt.",
+  "version": "0.0.0",
+  "author": {
+    "name": "Steve Usher",
+    "url": "https://github.com/steveush"
+  },
+  "repository": "https://github.com/steveush/grunt-jszip",
+  "bugs": "https://github.com/steveush/grunt-jszip/issues",
+  "license": "MIT",
+  "engines": {
+    "node": ">=12"
+  },
+  "main": "tasks/jszip.js",
+  "scripts": {
+    "test": "grunt clean&&jest ./test",
+    "test-build": "grunt --verbose",
+    "test-zip": "grunt jszip --verbose",
+    "test-zip:basic": "grunt jszip:basic --verbose",
+    "test-zip:dot": "grunt jszip:dot --verbose",
+    "test-zip:routed": "grunt jszip:routed --verbose",
+    "test-unzip": "grunt jsunzip --verbose",
+    "test-unzip:basic": "grunt jsunzip:basic --verbose",
+    "test-unzip:dot": "grunt jsunzip:dot --verbose",
+    "test-unzip:routed": "grunt jsunzip:routed --verbose"
+  },
+  "files": [
+    "tasks"
+  ],
+  "dependencies": {
+    "chalk": "^4.1.2",
+    "jszip": "^3.10.1"
+  },
+  "peerDependencies": {
+    "grunt": "^1.6.1"
+  },
+  "devDependencies": {
+    "dir-compare": "^4.0.0",
+    "grunt-contrib-clean": "^2.0.1",
+    "jest": "^29.5.0"
+  },
+  "keywords": [
+    "gruntplugin",
+    "zip",
+    "jszip"
+  ]
+}
